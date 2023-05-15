@@ -1,4 +1,4 @@
-// import "./globals.css";
+import "./globals.css";
 import Providers from "@/utils/provider";
 import React from "react";
 
