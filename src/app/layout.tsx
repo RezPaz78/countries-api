@@ -1,16 +1,16 @@
-import "./globals.css";
-import Providers from "@/utils/provider";
-import React from "react";
+import "../styles/globals.css"
+import Providers from "@/utils/provider"
+import React from "react"
 
 export const metadata = {
     title: "Countries",
     description: "This is a test task for Alibaba",
-};
+}
 
 export default function RootLayout({
     children,
 }: {
-    children: React.ReactNode;
+    children: React.ReactNode
 }) {
     return (
         <html lang="en">
@@ -18,5 +18,5 @@ export default function RootLayout({
                 <Providers>{children}</Providers>
             </body>
         </html>
-    );
+    )
 }
