@@ -15,9 +15,9 @@ const ThemeButton = () => {
             className="flex items-center justify-between"
         >
             {theme === "dark" ? (
-                <Sun1 size={15} className="text-white mr-2" />
+                <Sun1 size={15} className="mr-2 text-white" />
             ) : (
-                <Moon size={15} className="text-black mr-2" />
+                <Moon size={15} className="mr-2 text-black" />
             )}
             <span className="text-xs font-semibold tracking-wider">
                 {theme === "dark" ? "Light" : "Dark"} Mode
