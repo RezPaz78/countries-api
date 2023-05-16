@@ -6,13 +6,17 @@ module.exports = {
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                "very-light-gray": "#fafafa",
+                "dark-blue": "#2b3945",
+                "very-dark-blue": "#202c37",
+            },
+        },
         fontFamily: {
             Nunito: ["Nunito"],
         },
-        colors: {
-            "very-light-gray": hsl(0, "0%", "98%"),
-        },
     },
     plugins: [],
+    darkMode: "class",
 }

@@ -1,10 +1,8 @@
-import "../styles/globals.scss"
-import Providers from "@/utils/provider"
+"use client"
 
-export const metadata = {
-    title: "Countries",
-    description: "This is a test task for Alibaba",
-}
+import Navbar from "@/components/Navbar"
+import Providers from "@/utils/provider"
+import "../styles/globals.scss"
 
 export default function RootLayout({
     children,
@@ -13,8 +11,11 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className="">
-                <Providers>{children}</Providers>
+            <body>
+                <Providers>
+                    <Navbar />
+                    {children}
+                </Providers>
             </body>
         </html>
     )

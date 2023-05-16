@@ -3,6 +3,7 @@
 import { useState, PropsWithChildren } from "react"
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query"
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
+import { ThemeProvider } from "next-themes"
 
 const Providers = ({ children }: PropsWithChildren) => {
     const [client] = useState(
@@ -11,7 +12,7 @@ const Providers = ({ children }: PropsWithChildren) => {
 
     return (
         <QueryClientProvider client={client}>
-            {children}
+            <ThemeProvider attribute="class">{children}</ThemeProvider>
             <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
     )

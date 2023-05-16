@@ -9,3 +9,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+main {
+    height: 100vh;
+}
+
+@layer base {
+    body {
+        @apply dark:bg-very-dark-blue bg-very-light-gray;
+    }
+
+    nav {
+        @apply dark:bg-dark-blue bg-white;
+    }
+
+    main {
+        @apply px-14;
+    }
+}
