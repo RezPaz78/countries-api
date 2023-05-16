@@ -1,3 +1,3 @@
 export default function Home() {
-    return <main>Welcome, This is HOME !!</main>
+    return <main className="font-Nunito">Welcome, This is HOME !!</main>
 }

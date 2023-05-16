@@ -1,6 +1,5 @@
-import "../styles/globals.css"
+import "../styles/globals.scss"
 import Providers from "@/utils/provider"
-import React from "react"
 
 export const metadata = {
     title: "Countries",
@@ -14,7 +13,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className="text-red-800">
+            <body className="">
                 <Providers>{children}</Providers>
             </body>
         </html>
