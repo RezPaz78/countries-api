@@ -11,8 +11,8 @@ export default async function Home() {
     const dehydratedState = dehydrate(queryClient)
 
     return (
-        <main className="mt-24 font-Nunito font-extrabold text-black dark:text-white">
-            <div className="mb-10 flex w-full items-center justify-between">
+        <main className="mt-28 font-Nunito font-extrabold text-black dark:text-white">
+            <div className="mb-14 flex w-full items-center justify-between">
                 <Searchbox />
             </div>
             <Hydrate state={dehydratedState}>
