@@ -18,20 +18,20 @@ const CountryDetails = () => {
     })
 
     return (
-        <div className="h-80 w-full md:grid md:grid-cols-2 md:gap-20">
+        <div className="grid h-80 w-full grid-cols-1 md:grid-cols-2 md:gap-20">
             {error ? (
                 <p>There was an error fetching country details!!!</p>
             ) : isLoading || isFetching ? (
                 <p>Loading...</p>
             ) : data ? (
                 <>
-                    <div className="relative mb-10 w-full rounded-md md:mb-0">
+                    <div className="mb-10 w-full rounded-md md:relative md:mb-0">
                         <Image
                             src={data.flag}
                             alt={data.name}
                             width={4000}
                             height={3000}
-                            className="absolute left-0 top-0 h-full w-full rounded-md object-cover"
+                            className="h-full w-full rounded-md object-cover md:absolute md:left-0 md:top-0"
                             loading="lazy"
                         />
                     </div>
@@ -39,7 +39,7 @@ const CountryDetails = () => {
                         <h2 className="mb-7 text-2xl font-extrabold">
                             {data.name}
                         </h2>
-                        <div className="mb-14 md:grid md:grid-cols-2">
+                        <div className="mb-14 grid grid-cols-1 md:grid-cols-2">
                             <ul className="mb-10 [&>*]:mb-1 [&>li>span]:font-semibold">
                                 <li>
                                     <span>Native Name:</span> {data.nativeName}

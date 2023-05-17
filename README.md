@@ -37,6 +37,8 @@ Check out the deployed version on [Liara](https://liara.ir/) for a more realisti
 
 [https://countries.iran.liara.run](https://countries.iran.liara.run/)
 
+**Because of the hydration problem, you may get `connection closed` error. Try refreshing the page may solve the problem.**
+
 ## Features & Functionality
 
 -   This app uses `eslint` & `prettier` as well as `TypeScript` to validate & format the code. A `husky` pre-commit hook is also configured alongside with `lint-staged` in order to automate the validation process before each commit to the git.
