@@ -16,14 +16,15 @@ main {
 
 @layer base {
     body {
-        @apply dark:bg-very-dark-blue bg-very-light-gray;
+        @apply bg-very-light-gray dark:bg-very-dark-blue;
     }
 
     nav {
-        @apply dark:bg-dark-blue bg-white;
+        @apply bg-white dark:bg-dark-blue;
     }
 
     main {
         @apply px-14;
+        @apply pb-10;
     }
 }

@@ -3,7 +3,7 @@ import getQueryClient from "@/utils/getQueryClient"
 import { dehydrate } from "@tanstack/query-core"
 import Searchbox from "@/components/Searchbox"
 import ListCountries from "@/components/ListCountries"
-import { getCountries } from "./api/countries"
+import { getCountries } from "../api/countries"
 
 export default async function Home() {
     const queryClient = getQueryClient()
