@@ -25,12 +25,12 @@ const FilteredCountries = () => {
                 data.map(country => {
                     return (
                         <Country
-                            key={country.name.common}
+                            key={country.name}
                             name={country.name}
                             population={country.population}
                             region={country.region}
                             capital={country.capital}
-                            flags={country.flags}
+                            flag={country.flag}
                         />
                     )
                 })

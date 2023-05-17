@@ -27,8 +27,8 @@ const CountryDetails = () => {
                 <>
                     <div className="relative mb-10 w-full rounded-md md:mb-0">
                         <Image
-                            src={data.flags.png}
-                            alt={data.name.common}
+                            src={data.flag}
+                            alt={data.name}
                             width={4000}
                             height={3000}
                             className="absolute left-0 top-0 h-full w-full rounded-md object-cover"
@@ -37,17 +37,12 @@ const CountryDetails = () => {
                     </div>
                     <div className="flex flex-col justify-center pb-10 md:pb-0">
                         <h2 className="mb-7 text-2xl font-extrabold">
-                            {data.name.common}
+                            {data.name}
                         </h2>
                         <div className="mb-14 md:grid md:grid-cols-2">
                             <ul className="mb-10 [&>*]:mb-1 [&>li>span]:font-semibold">
                                 <li>
-                                    <span>Native Name:</span>{" "}
-                                    {
-                                        data.name.nativeName[
-                                            Object.keys(data.name.nativeName)[0]
-                                        ].common
-                                    }
+                                    <span>Native Name:</span> {data.nativeName}
                                 </li>
                                 <li>
                                     <span>Population:</span> {data.population}
@@ -65,32 +60,40 @@ const CountryDetails = () => {
                             <ul className="[&>*]:mb-1 [&>li>span]:font-semibold">
                                 <li>
                                     <span>Top Level Domain:</span>{" "}
-                                    {data.tld.map(tld => (
+                                    {data.topLevelDomain.map(tld => (
                                         <span key={tld}>{tld}, </span>
                                     ))}
                                 </li>
                                 <li>
                                     <span>Currencies:</span>{" "}
-                                    {
-                                        data.currencies[
-                                            Object.keys(data.currencies)[0]
-                                        ].name
-                                    }
+                                    {data.currencies[0].name}
                                 </li>
                                 <li>
                                     <span>Languages:</span>{" "}
-                                    {
-                                        data.languages[
-                                            Object.keys(data.languages)[0]
-                                        ]
-                                    }
+                                    {data.languages[0].name}
                                 </li>
                             </ul>
                         </div>
                         <div className="flex items-center">
                             <span className="font-semibold">
-                                Border Countries:
+                                Border Countries: &nbsp;
                             </span>
+                            <div className="flex flex-wrap items-center justify-around text-xs">
+                                {data.borders ? (
+                                    data.borders.map(border => (
+                                        <span
+                                            key={border}
+                                            className="mx-2 my-2 rounded-sm bg-white px-5 py-1 shadow-md dark:bg-dark-blue"
+                                        >
+                                            {border}
+                                        </span>
+                                    ))
+                                ) : (
+                                    <span>
+                                        This country has no border neighbours.
+                                    </span>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </>

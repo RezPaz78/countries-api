@@ -1,31 +1,18 @@
 export type CountryDetails = CountryItem & {
+    nativeName: string
     subregion: string
-    tld: string[]
-    currencies: {
-        [key: string]: {
-            name: string
-            symbol: string
-        }
-    }
+    topLevelDomain: string[]
+    currencies: { name: string }[]
     languages: {
-        [key: string]: string
-    }
+        name: string
+    }[]
+    borders?: string[]
 }
 
 export type CountryItem = {
-    name: {
-        common: string
-        nativeName: {
-            [key: string]: {
-                official: string
-                common: string
-            }
-        }
-    }
+    name: string
     population: number
     capital: string
     region: string
-    flags: {
-        png: string
-    }
+    flag: string
 }

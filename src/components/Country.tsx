@@ -5,18 +5,18 @@ import { CountryItem } from "@/types"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 
-const Country = ({ name, population, capital, region, flags }: CountryItem) => {
+const Country = ({ name, population, capital, region, flag }: CountryItem) => {
     const router = useRouter()
 
     return (
         <div
             className="flex h-[350px] cursor-pointer flex-col justify-between rounded-md bg-white dark:bg-dark-blue"
-            onClick={() => router.push(`/${name.common}`)}
+            onClick={() => router.push(`/${name}`)}
         >
             <div className="relative h-40 w-full rounded-md">
                 <Image
-                    alt={name.common}
-                    src={flags.png}
+                    alt={name}
+                    src={flag}
                     width={4000}
                     height={3000}
                     className="absolute left-0 top-0 h-full w-full rounded-t-md object-cover"
@@ -25,7 +25,7 @@ const Country = ({ name, population, capital, region, flags }: CountryItem) => {
             </div>
             <div className="px-7 pb-7">
                 <h2 className="mb-5 overflow-hidden text-ellipsis whitespace-nowrap text-xl font-extrabold">
-                    {name.common}
+                    {name}
                 </h2>
                 <div className="mb-1">
                     <span className="font-semibold">Poplation: </span>

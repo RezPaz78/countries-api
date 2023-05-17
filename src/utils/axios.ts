@@ -1,8 +1,7 @@
 import axios from "axios"
-// import { toast } from "react-toastify"
 
 const axiosInstance = axios.create({
-    baseURL: `https://restcountries.com`,
+    baseURL: `https://restcountries.com/v2`,
     headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -14,8 +13,6 @@ axiosInstance.interceptors.response.use(
         return response
     },
     error => {
-        // const res = error.message
-        // toast.warn(`A request was denied with the error code ${res.status}`)
         return Promise.reject(error)
     }
 )

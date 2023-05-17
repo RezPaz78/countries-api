@@ -1,8 +1,7 @@
 import Navbar from "@/components/Navbar"
 import Providers from "@/utils/Provider"
-import "../styles/globals.scss"
-import "react-toastify/dist/ReactToastify.css"
 import { Metadata } from "next"
+import "../styles/globals.scss"
 
 export const metadata: Metadata = {
     title: "Countries",
