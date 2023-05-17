@@ -25,12 +25,13 @@ const CountryDetails = () => {
                 <p>Loading...</p>
             ) : data ? (
                 <>
-                    <div className="relative mb-10 h-full w-full rounded-md md:mb-0">
+                    <div className="relative mb-10 w-full rounded-md md:mb-0">
                         <Image
                             src={data.flags.png}
                             alt={data.name.common}
-                            fill
-                            className="rounded-md object-cover"
+                            width={4000}
+                            height={3000}
+                            className="absolute left-0 top-0 h-full w-full rounded-md object-cover"
                         />
                     </div>
                     <div className="flex flex-col justify-center pb-10 md:pb-0">
