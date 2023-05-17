@@ -4,7 +4,7 @@ import { getCountry } from "@/api/country"
 import { useQuery } from "@tanstack/react-query"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import React, { useEffect } from "react"
+import React from "react"
 
 const CountryDetails = () => {
     const pathname = usePathname()
@@ -16,10 +16,6 @@ const CountryDetails = () => {
             return country[0]
         },
     })
-
-    useEffect(() => {
-        data ? console.log(data.flags.png) : null
-    }, [data])
 
     return (
         <div className="h-80 w-full md:grid md:grid-cols-2 md:gap-20">

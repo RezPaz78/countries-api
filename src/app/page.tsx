@@ -4,6 +4,7 @@ import { dehydrate } from "@tanstack/query-core"
 import Searchbox from "@/components/Searchbox"
 import ListCountries from "@/components/ListCountries"
 import { getCountries } from "../api/countries"
+import Dropdown from "@/components/Dropdown"
 
 export default async function Home() {
     const queryClient = getQueryClient()
@@ -14,6 +15,7 @@ export default async function Home() {
         <main>
             <div className="mb-14 flex w-full items-center justify-between">
                 <Searchbox />
+                <Dropdown />
             </div>
             <Hydrate state={dehydratedState}>
                 <ListCountries />
