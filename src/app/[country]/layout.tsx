@@ -6,7 +6,7 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const country = params.country.replaceAll(/%2./g, " ")
+    const country = params.country.replaceAll(/%([0-9]|[A-Z])./g, " ")
 
     return {
         title: `Countries | ${country}`,

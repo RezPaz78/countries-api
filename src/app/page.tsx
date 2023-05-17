@@ -13,7 +13,7 @@ export default async function Home() {
 
     return (
         <main>
-            <div className="mb-14 flex w-full items-center justify-between">
+            <div className="mb-14 flex w-full flex-wrap items-center justify-between">
                 <Searchbox />
                 <Dropdown />
             </div>
