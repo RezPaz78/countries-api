@@ -3,7 +3,7 @@ import React from "react"
 
 const Searchbox = () => {
     return (
-        <span className="flex basis-1/3 items-center justify-start rounded-md bg-white py-3 pl-7 shadow dark:bg-dark-blue">
+        <span className="flex w-full basis-1/3 items-center justify-start rounded-md bg-white py-3 pl-7 shadow dark:bg-dark-blue md:w-auto">
             <SearchNormal1
                 size={17}
                 className="mr-5 text-black dark:text-white"

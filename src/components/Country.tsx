@@ -1,11 +1,19 @@
+"use client"
+
 import React from "react"
 import { CountryItem } from "@/types"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 const Country = ({ name, population, capital, region, flags }: CountryItem) => {
+    const router = useRouter()
+
     return (
-        <div className="flex h-96 flex-col justify-between rounded-md bg-white dark:bg-dark-blue">
-            <div className="relative h-36 w-full rounded-md">
+        <div
+            className="flex h-[350px] cursor-pointer flex-col justify-between rounded-md bg-white dark:bg-dark-blue"
+            onClick={() => router.push(`/${name.common}`)}
+        >
+            <div className="relative h-40 w-full rounded-md">
                 <Image
                     alt={name.common}
                     src={flags.png}

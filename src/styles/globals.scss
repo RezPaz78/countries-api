@@ -17,6 +17,8 @@ main {
 @layer base {
     body {
         @apply bg-very-light-gray dark:bg-very-dark-blue;
+        @apply text-black dark:text-white;
+        @apply font-Nunito;
     }
 
     nav {
@@ -24,7 +26,8 @@ main {
     }
 
     main {
-        @apply px-14;
+        @apply px-7 md:px-14;
         @apply pb-10;
+        @apply mt-28;
     }
 }

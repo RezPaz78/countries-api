@@ -1,10 +1,13 @@
-export const metadata = {
-    title: "Welcome to Japan",
-    description: "This is a test task for Alibaba",
-}
+import BackButton from "@/components/BackButton"
+import CountryDetails from "@/components/CountryDetails"
 
-const Country = () => {
-    return <main>Welcome to FOLAN!!</main>
+const Country = async () => {
+    return (
+        <>
+            <BackButton />
+            <CountryDetails />
+        </>
+    )
 }
 
 export default Country

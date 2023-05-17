@@ -1,5 +1,5 @@
 import axios from "axios"
-import { toast } from "react-toastify"
+// import { toast } from "react-toastify"
 
 const axiosInstance = axios.create({
     baseURL: `https://restcountries.com`,
@@ -14,8 +14,8 @@ axiosInstance.interceptors.response.use(
         return response
     },
     error => {
-        const res = error.message
-        toast.error(`A request was denied with the error code ${res.status}`)
+        // const res = error.message
+        // toast.warn(`A request was denied with the error code ${res.status}`)
         return Promise.reject(error)
     }
 )
