@@ -5,7 +5,6 @@ import { QueryClientProvider, QueryClient } from "@tanstack/react-query"
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 import { ThemeProvider, useTheme } from "next-themes"
 import { ToastContainer } from "react-toastify"
-import FilterProvider from "@/context/regionFilter/filterProvider"
 
 const Providers = ({ children }: PropsWithChildren) => {
     const [client] = useState(
@@ -16,9 +15,7 @@ const Providers = ({ children }: PropsWithChildren) => {
 
     return (
         <QueryClientProvider client={client}>
-            <FilterProvider>
-                <ThemeProvider attribute="class">{children}</ThemeProvider>
-            </FilterProvider>
+            <ThemeProvider attribute="class">{children}</ThemeProvider>
             <ToastContainer
                 position="bottom-center"
                 autoClose={5000}

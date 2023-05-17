@@ -1,29 +1,26 @@
 "use client"
 
-import { getCountries } from "@/api/countries"
-import { useQuery } from "@tanstack/react-query"
+import React from "react"
 import Country from "./Country"
+import { useQuery } from "@tanstack/react-query"
+import { regionFilter } from "@/api/regionFilter"
 import { useSearchParams } from "next/navigation"
-import FilteredCountries from "./FilteredCountries"
 
-export default function ListCountries() {
+const FilteredCountries = () => {
     const searchParams = useSearchParams()
-
     const filter = searchParams.get("filter")
 
     const { data, isLoading, isFetching, error } = useQuery({
-        queryKey: ["hydrate-countries"],
-        queryFn: () => getCountries(),
+        queryKey: ["region-filter", filter],
+        queryFn: () => regionFilter(filter),
     })
 
     return (
-        <div className="grid grid-cols-1 gap-10 pb-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-20">
-            {filter ? (
-                <FilteredCountries />
-            ) : error ? (
-                <p>There was an error fetching countries!!!</p>
+        <>
+            {error ? (
+                <p>There was an error fetching filtered countries!!!</p>
             ) : isLoading || isFetching ? (
-                <p>Loading...</p>
+                <p>Loading filtered countries...</p>
             ) : data ? (
                 data.map(country => {
                     return (
@@ -38,6 +35,8 @@ export default function ListCountries() {
                     )
                 })
             ) : null}
-        </div>
+        </>
     )
 }
+
+export default FilteredCountries
