@@ -20,6 +20,7 @@ const Country = ({ name, population, capital, region, flags }: CountryItem) => {
                     width={4000}
                     height={3000}
                     className="absolute left-0 top-0 h-full w-full rounded-t-md object-cover"
+                    loading="lazy"
                 />
             </div>
             <div className="px-7 pb-7">

@@ -32,6 +32,7 @@ const CountryDetails = () => {
                             width={4000}
                             height={3000}
                             className="absolute left-0 top-0 h-full w-full rounded-md object-cover"
+                            loading="lazy"
                         />
                     </div>
                     <div className="flex flex-col justify-center pb-10 md:pb-0">
