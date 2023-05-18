@@ -18,7 +18,10 @@ const Searchbox = () => {
                 className="w-full bg-white font-light text-black placeholder:text-sm focus:outline-none dark:bg-dark-blue dark:text-white"
                 placeholder="Search for a country..."
                 onChange={event =>
-                    dispatch({ type: "SET", payload: event.target.value })
+                    dispatch({
+                        type: "SET",
+                        payload: event.target.value.toLowerCase(),
+                    })
                 }
             />
         </span>

@@ -45,7 +45,8 @@ const CountryDetails = () => {
                                     <span>Native Name:</span> {data.nativeName}
                                 </li>
                                 <li>
-                                    <span>Population:</span> {data.population}
+                                    <span>Population:</span>{" "}
+                                    {data.population.toLocaleString("en-US")}
                                 </li>
                                 <li>
                                     <span>Region:</span> {data.region}

@@ -29,7 +29,9 @@ const Country = ({ name, population, capital, region, flag }: CountryItem) => {
                 </h2>
                 <div className="mb-1">
                     <span className="font-semibold">Population: </span>
-                    <span className="font-light">{population}</span>
+                    <span className="font-light">
+                        {population.toLocaleString("en-US")}
+                    </span>
                 </div>
                 <div className="mb-1">
                     <span className="font-semibold">Region: </span>
