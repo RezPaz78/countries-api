@@ -4,6 +4,7 @@ import { useState, PropsWithChildren } from "react"
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query"
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 import { ThemeProvider } from "next-themes"
+import SearchProvider from "@/context/searchProvider"
 
 const Providers = ({ children }: PropsWithChildren) => {
     const [client] = useState(
@@ -12,7 +13,9 @@ const Providers = ({ children }: PropsWithChildren) => {
 
     return (
         <QueryClientProvider client={client}>
-            <ThemeProvider attribute="class">{children}</ThemeProvider>
+            <ThemeProvider attribute="class">
+                <SearchProvider>{children}</SearchProvider>
+            </ThemeProvider>
             <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
     )

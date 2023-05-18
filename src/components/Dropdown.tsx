@@ -9,7 +9,7 @@ import { useRouter, useSearchParams } from "next/navigation"
 const regions: { name: Region }[] = [
     { name: "Asia" },
     { name: "Africa" },
-    { name: "America" },
+    { name: "Americas" },
     { name: "Europe" },
     { name: "Oceania" },
 ]

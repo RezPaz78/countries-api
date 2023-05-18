@@ -28,7 +28,7 @@ const Country = ({ name, population, capital, region, flag }: CountryItem) => {
                     {name}
                 </h2>
                 <div className="mb-1">
-                    <span className="font-semibold">Poplation: </span>
+                    <span className="font-semibold">Population: </span>
                     <span className="font-light">{population}</span>
                 </div>
                 <div className="mb-1">
