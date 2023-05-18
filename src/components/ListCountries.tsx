@@ -20,7 +20,13 @@ export default function ListCountries() {
 
     const { data, isLoading, isFetching, error } = useQuery({
         queryKey: ["hydrate-countries"],
-        queryFn: () => getCountries(),
+        queryFn: async () => {
+            const result = await getCountries()
+            const sortedCountries = result.sort((c1, c2) =>
+                c1.name < c2.name ? 1 : c1.name > c2.name ? -1 : 0
+            )
+            return sortedCountries
+        },
     })
 
     useEffect(() => {
@@ -31,7 +37,10 @@ export default function ListCountries() {
                           country.name.toLowerCase().search(search) !== -1
                   )
                 : []
-        setSearchResults(searchResults)
+        const sortedCountries = searchResults.sort((c1, c2) =>
+            c1.name < c2.name ? 1 : c1.name > c2.name ? -1 : 0
+        )
+        setSearchResults(sortedCountries.reverse())
     }, [search, data, dispatch])
 
     return (
