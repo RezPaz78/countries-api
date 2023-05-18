@@ -43,7 +43,7 @@ Check out the deployed version on [Liara](https://liara.ir/) for a more realisti
 
 -   This app uses `eslint` & `prettier` as well as `TypeScript` to validate & format the code. A `husky` pre-commit hook is also configured alongside with `lint-staged` in order to automate the validation process before each commit to the git.
 
--   In the main page, all countries are listed & you can filter them by region as well as searching for a specific country. Searching is done using `context API` for `state-management`. The filter functionality is a two-way binded flow i.e. you can filter content using the dropdown in the main page, and writing the url manually like `https://baseURL/?filter=Asia` at the same time.
+-   In the main page, all countries are listed in a `sorted` manner & you can filter them by region as well as searching for a specific country. Sorting is done on fetch. Searching is done using `context API` for `state-management`. The filter functionality is a two-way binded flow i.e. you can filter content using the dropdown in the main page, and writing the url manually like `https://baseURL/?filter=Asia` at the same time.
 
 -   The app operates in both `dark mode` & `light mode`, and the ratio of images are fixed in `4:3`. All Images are also lazy loaded using the new `next/image` capabilities.
 
